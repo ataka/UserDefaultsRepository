@@ -12,7 +12,9 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "UserDefaultsRepository"),
+            name: "UserDefaultsRepository",
+            resources: [.copy("PrivacyInfo.xcprivacy")]
+        ),
         .testTarget(
             name: "UserDefaultsRepositoryTests",
             dependencies: ["UserDefaultsRepository"]),
